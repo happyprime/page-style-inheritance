@@ -1,0 +1,24 @@
+{
+  "name": "page-style-inheritance",
+  "version": "1.0.0",
+  "description": "Style inheritance for hierarchical pages",
+  "scripts": {
+    "build": "wp-scripts build js/src/*.js --output-path=js/build",
+	"lint": "wp-scripts lint-js",
+	"fix": "wp-scripts lint-js --fix",
+	"start": "wp-scripts start js/src/*.js --output-path=js/build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/happyprime/page-style-inheritance.git"
+  },
+  "author": "Happy Prime",
+  "license": "GPL-2.0-or-later",
+  "bugs": {
+    "url": "https://github.com/happyprime/page-style-inheritance/issues"
+  },
+  "homepage": "https://github.com/happyprime/page-style-inheritance#readme",
+  "devDependencies": {
+    "@wordpress/scripts": "^26.1.0"
+  }
+}
