@@ -126,7 +126,12 @@ function filter_body_class( array $classes ): array {
 	}
 
 	$page_style = get_page_style();
-	$styles     = get_styles();
+
+	if ( '' === $page_style ) {
+		return $classes;
+	}
+
+	$styles = get_styles();
 
 	if ( ! array_key_exists( $page_style, $styles ) ) {
 		return $classes;
@@ -146,7 +151,12 @@ function output_styles() {
 	}
 
 	$page_style = get_page_style();
-	$styles     = get_styles();
+
+	if ( '' === $page_style ) {
+		return;
+	}
+
+	$styles = get_styles();
 
 	if ( ! array_key_exists( $page_style, $styles ) ) {
 		return;
