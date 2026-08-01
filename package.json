@@ -1,24 +1,34 @@
 {
-  "name": "page-style-inheritance",
-  "version": "1.0.0",
-  "description": "Style inheritance for hierarchical pages",
-  "scripts": {
-    "build": "wp-scripts build js/src/*.js --output-path=js/build",
-	"lint": "wp-scripts lint-js",
-	"fix": "wp-scripts lint-js --fix",
-	"start": "wp-scripts start js/src/*.js --output-path=js/build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/happyprime/page-style-inheritance.git"
-  },
-  "author": "Happy Prime",
-  "license": "GPL-2.0-or-later",
-  "bugs": {
-    "url": "https://github.com/happyprime/page-style-inheritance/issues"
-  },
-  "homepage": "https://github.com/happyprime/page-style-inheritance#readme",
-  "devDependencies": {
-    "@wordpress/scripts": "^26.1.0"
-  }
+	"name": "page-style-inheritance",
+	"version": "1.0.0",
+	"description": "Style inheritance for hierarchical pages",
+	"author": "Happy Prime",
+	"license": "GPL-2.0-or-later",
+	"keywords": [
+		"wordpress-plugin"
+	],
+	"homepage": "https://github.com/happyprime/page-style-inheritance#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/happyprime/page-style-inheritance.git"
+	},
+	"bugs": {
+		"url": "https://github.com/happyprime/page-style-inheritance/issues"
+	},
+	"devDependencies": {
+		"@wordpress/npm-package-json-lint-config": "^5.10.0",
+		"@wordpress/scripts": "^26.1.0",
+		"npm-package-json-lint": "^8.0.0"
+	},
+	"scripts": {
+		"build": "wp-scripts build js/src/*.js --output-path=js/build",
+		"lint": "npm run lint:js",
+		"fix": "wp-scripts lint-js --fix",
+		"start": "wp-scripts start js/src/*.js --output-path=js/build",
+		"lint:js": "wp-scripts lint-js",
+		"lint:package": "node ./node_modules/npm-package-json-lint/dist/cli.js ./package.json"
+	},
+	"npmpackagejsonlint": {
+		"extends": "@wordpress/npm-package-json-lint-config"
+	}
 }
